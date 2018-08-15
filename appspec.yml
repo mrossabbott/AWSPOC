@@ -1,7 +1,7 @@
 version: 0.0
 os: linux
 files:
-  - source: AWSPOC/
+  - source: puppet/
     destination: /etc/puppet/codedeploy
   - source: target/hello.war
     destination: /var/lib/tomcat6/webapps
