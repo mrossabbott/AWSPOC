@@ -1,0 +1,6 @@
+APPLICATION_NAME="mabbottmasterlessdemo"
+DEPLOY_GROUP="mabbottmasterlessdemo-y7upebc"
+BUCKET="mabbottmasterlessdemo"
+BUNDLE_PATH="puppet-masterless.tar"
+EC2_TAG_KEY='Puppet'
+EC2_TAG_VALUE='Masterless'
