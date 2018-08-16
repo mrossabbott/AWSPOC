@@ -1,17 +1,19 @@
 version: 0.0
-os: linux
+os: windows
 files:
-  - source: puppet/
-    destination: /etc/puppet/codedeploy
-  - source: target/hello.war
-    destination: /var/lib/tomcat6/webapps
+  - source: 'https://artifactory.concurtech.net/artifactory/util-release-local/com/concur/cmo/CESWebapp/SU153/153.0.0.0.115/concur.war'
+    destination: c:\ces-install
+  - source: 'https://artifactory.concurtech.net/artifactory/ext-util-selfserve-local/apache/tomcat/apache-tomcat-8.0.24.exe'
+    destination: c:\ces-install
+  - source: 'https://artifactory.concurtech.net/artifactory/ext-util-selfserve-local/java/oracle/windows/jdk-8u131-windows-x64.exe'
+    destination: c:\ces-install
 hooks:
   BeforeInstall:
-    - location: masterless/deploy_hooks/install-puppet.sh
-      runas: root
+    - location: ces\installprereqs.ps1
+      runas: Administrator
   ApplicationStart:
-    - location: masterless/deploy_hooks/puppet-apply.sh
-      runas: root
+    - location: ces\deployces.ps1
+      runas: Administrator
   ValidateService:
-    - location: masterless/deploy_hooks/verify_service.sh
-      runas: root
+    - location: ces\validateces.ps1
+      runas: Administrator
