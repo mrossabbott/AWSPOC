@@ -7,6 +7,6 @@
 #download war file
 (New-Object System.Net.WebClient).DownloadFile("https://artifactory.concurtech.net/artifactory/util-release-local/com/concur/cmo/CESWebapp/SU153/153.0.0.0.115/concur.war", "C:\ces-install\concur.war")
 #install java
-Start-Process -Wait -Filepath "C:\ces-install\jdk-8u131-windows-x64.exe" -ArgumentList 
+C:\ces-install\win-install-java.ps1
 #install tomcat
-Start-Process -Wait -Filepath "C:\ces-install\apache-tomcat-8.0.24.exe" -ArgumentList
+C:\ces-install\win-install-tomcat.ps1
