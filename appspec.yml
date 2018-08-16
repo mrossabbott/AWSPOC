@@ -5,6 +5,9 @@ files:
     destination: c:\ces-install
   - source: \ces\files\server.properties
     destination: c:\ces-install
+  - source: \ces\application\win-install-tomcat.ps1
+    destination: c:\ces-install
+  - source: \ces\application\win-install-java.ps1
 hooks:
   BeforeInstall:
     - location: ces\installprereqs.ps1
