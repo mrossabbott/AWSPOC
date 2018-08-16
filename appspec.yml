@@ -1,11 +1,9 @@
 version: 0.0
 os: windows
 files:
-  - source: 'https://artifactory.concurtech.net/artifactory/util-release-local/com/concur/cmo/CESWebapp/SU153/153.0.0.0.115/concur.war'
+  - source: \ces\files\master.properties
     destination: c:\ces-install
-  - source: 'https://artifactory.concurtech.net/artifactory/ext-util-selfserve-local/apache/tomcat/apache-tomcat-8.0.24.exe'
-    destination: c:\ces-install
-  - source: 'https://artifactory.concurtech.net/artifactory/ext-util-selfserve-local/java/oracle/windows/jdk-8u131-windows-x64.exe'
+  - source: \ces\files\server.properties
     destination: c:\ces-install
 hooks:
   BeforeInstall:
